@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Employee.create!( { :employee_id => "21223",:employee_name => "Santosh",:employee_email => "santosh.turamari@hpe.com",:projects_attributes => [{ :name => "Quanutm",:tasks_attributes => [{:activity => "Analyzing the requirement",:status => "WIP",
+    :duration => 1}]}] })
