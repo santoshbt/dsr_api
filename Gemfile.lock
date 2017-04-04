@@ -1,3 +1,45 @@
+GIT
+  remote: git://github.com/rspec/rspec-core.git
+  revision: 5913646415e25405fa57a3615437548fe55987eb
+  specs:
+    rspec-core (3.6.0.beta2)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-expectations.git
+  revision: cd3d6a1d81bd677e70bdf7b475f12eeae357ff6a
+  specs:
+    rspec-expectations (3.6.0.beta2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-mocks.git
+  revision: be8d5c92a200328addf5365d3421d2940eb711b5
+  specs:
+    rspec-mocks (3.6.0.beta2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-rails.git
+  revision: e80be2c2652d6c76f2c1bb7a798d9ce3dc9d63fb
+  specs:
+    rspec-rails (3.6.0.beta2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.6.0.beta2)
+      rspec-expectations (= 3.6.0.beta2)
+      rspec-mocks (= 3.6.0.beta2)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-support.git
+  revision: 7d13228532c1138bd30013700c4a36ba19e430bd
+  specs:
+    rspec-support (3.6.0.beta2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -97,19 +139,6 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    rspec (3.5.0)
-      rspec-core (~> 3.5.0)
-      rspec-expectations (~> 3.5.0)
-      rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.4)
-      rspec-support (~> 3.5.0)
-    rspec-expectations (3.5.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.5.0)
-    rspec-mocks (3.5.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.5.0)
-    rspec-support (3.5.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -140,7 +169,11 @@ DEPENDENCIES
   puma (~> 3.0)
   rack-cors
   rails (~> 5.0.0)
-  rspec
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

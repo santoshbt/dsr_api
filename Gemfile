@@ -33,7 +33,11 @@ group :development do
 end
 
 group :test do
-	gem 'rspec'
+	gem "rspec-core", :github => "rspec/rspec-core"
+	gem "rspec-expectations", :github => "rspec/rspec-expectations"
+	gem "rspec-mocks", :github => "rspec/rspec-mocks"
+	gem "rspec-support", :github => "rspec/rspec-support"
+	gem "rspec-rails", :github => "rspec/rspec-rails"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
