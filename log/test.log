@@ -538,3 +538,126 @@ Processing by EmployeesController#create as HTML
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
 Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-04 22:44:13 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "projects_attributes"=>[{"name"=>"Quantum", "tasks_attributes"=>[{"activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}, {"activity"=>"Implementing the sidebar", "status"=>"Competed", "duration"=>"2"}]}]}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["employee_id", 21223], ["employee_name", "Santosh"], ["employee_email", "santosh.turamari@hpe.com"], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Quantum"], ["employee_id", 20], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("activity", "status", "duration", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1], ["project_id", 38], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("activity", "status", "duration", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["activity", "Implementing the sidebar"], ["status", "Competed"], ["duration", 2], ["project_id", 38], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Quantum"], ["employee_id", 20], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("activity", "status", "duration", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1], ["project_id", 39], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("activity", "status", "duration", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["activity", "Implementing the sidebar"], ["status", "Competed"], ["duration", 2], ["project_id", 39], ["created_at", 2017-04-04 17:14:13 UTC], ["updated_at", 2017-04-04 17:14:13 UTC]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."employee_id" = $1 ORDER BY "projects"."id" DESC LIMIT $2[0m  [["employee_id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 12.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-04 22:44:13 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "projects_attributes"=>[{"name"=>"", "tasks_attributes"=>[{"activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}]}]}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-04 22:44:13 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "projects_attributes"=>[{"name"=>"Radar", "tasks_attributes"=>[{"activity"=>" ", "status"=>"WIP", "duration"=>"1"}]}]}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (370.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dsr_api_test"[0m
+  [1m[35m (521.9ms)[0m  [1m[35mCREATE DATABASE "dsr_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "employee_id" integer, "employee_name" character varying, "employee_email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "project_name" character varying, "activity" character varying, "status" character varying, "duration" integer)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "projects" ("id" serial primary key, "name" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_employee_id" ON "projects" USING btree ("employee_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" serial primary key, "activity" character varying, "status" character varying, "duration" integer, "project_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_tasks_on_project_id" ON "tasks" USING btree ("project_id")[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170407162033)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170403162552),
+(20170403162622),
+(20170403162721);
+
+[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-04-07 16:23:00 UTC], ["updated_at", 2017-04-07 16:23:00 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-07 21:53:01 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "project_name"=>"Quantum", "activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 21223], ["employee_name", "Santosh"], ["employee_email", "santosh.turamari@hpe.com"], ["created_at", 2017-04-07 16:23:01 UTC], ["updated_at", 2017-04-07 16:23:01 UTC], ["project_name", "Quantum"], ["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 6.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-07 21:53:01 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "project_name"=>"", "activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 21223], ["employee_name", "Santosh"], ["employee_email", "santosh.turamari@hpe.com"], ["created_at", 2017-04-07 16:23:01 UTC], ["updated_at", 2017-04-07 16:23:01 UTC], ["project_name", ""], ["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-07 21:53:33 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "project_name"=>"Quantum", "activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 21223], ["employee_name", "Santosh"], ["employee_email", "santosh.turamari@hpe.com"], ["created_at", 2017-04-07 16:23:33 UTC], ["updated_at", 2017-04-07 16:23:33 UTC], ["project_name", "Quantum"], ["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 4.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-07 21:53:33 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "project_name"=>"", "activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 21223], ["employee_name", "Santosh"], ["employee_email", "santosh.turamari@hpe.com"], ["created_at", 2017-04-07 16:23:33 UTC], ["updated_at", 2017-04-07 16:23:33 UTC], ["project_name", ""], ["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-07 21:55:12 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "project_name"=>"Quantum", "activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 21223], ["employee_name", "Santosh"], ["employee_email", "santosh.turamari@hpe.com"], ["created_at", 2017-04-07 16:25:12 UTC], ["updated_at", 2017-04-07 16:25:12 UTC], ["project_name", "Quantum"], ["activity", "Analyzing the requirement"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 4.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/employees" for 127.0.0.1 at 2017-04-07 21:55:12 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{"employee_id"=>"21223", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamari@hpe.com", "project_name"=>"", "activity"=>"Analyzing the requirement", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

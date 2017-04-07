@@ -8,17 +8,10 @@ RSpec.describe "Task Management", :type => :request do
 										:employee_id => 21223,
 										:employee_name => "Santosh",
 										:employee_email => "santosh.turamari@hpe.com",
-										:projects_attributes => [{ 
-      										        :name => "Quantum",
-      										        :tasks_attributes => [
-										              {
-            													:activity => "Analyzing the requirement",
-            													:status => "WIP",
-            													:duration => 1
-            										  }]
-				                       	}]	
-										
-										
+										:project_name => "Quantum",
+										:activity => "Analyzing the requirement",
+										:status => "WIP",
+            							:duration => 1																									
 								 }
 						} 
 
@@ -33,46 +26,15 @@ RSpec.describe "Task Management", :type => :request do
 										:employee_id => 21223,
 										:employee_name => "Santosh",
 										:employee_email => "santosh.turamari@hpe.com",
-										:projects_attributes => [{ 
-      										        :name => "",
-      										        :tasks_attributes => [
-										              {
-            													:activity => "Analyzing the requirement",
-            													:status => "WIP",
-            													:duration => 1
-            										  }]
-				                       	}]	
-										
-										
+										:project_name => "",
+										:activity => "Analyzing the requirement",
+										:status => "WIP",
+            							:duration => 1																									
 								 }
 						} 
         expect(response.content_type).to eq("application/json")	
 		parse_json = JSON(response.body)
 		expect(parse_json["success"]).to eq false						
-	end
-
-	it "does not create the task if project child class values are not given" do
-		post "/employees", { 
-							:employee => { 	
-										:employee_id => 21223,
-										:employee_name => "Santosh",
-										:employee_email => "santosh.turamari@hpe.com",
-										:projects_attributes => [{ 
-      										        :name => "Radar",
-      										        :tasks_attributes => [
-										              {
-            													:activity => " ",
-            													:status => "WIP",
-            													:duration => 1
-            										  }]
-				                       	}]	
-										
-										
-								 }
-						} 
-        expect(response.content_type).to eq("application/json")	
-		parse_json = JSON(response.body)
-		expect(parse_json["success"]).to eq false								
 	end
 end
 
