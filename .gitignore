@@ -1,2 +1,6 @@
 /config/*
+<<<<<<< HEAD
 /log
+=======
+/log/*
+>>>>>>> send_reminder_mails

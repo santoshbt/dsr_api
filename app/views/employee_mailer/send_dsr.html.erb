@@ -1,0 +1,34 @@
+
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+	      	<th style="border: 1px solid black;">Project Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+    	<% employee_names = []
+    	@reports.each do |report| %>
+			<tr>
+				<td style="border: 1px solid black;">
+					<% unless employee_names.include? report.employee_name %>
+						<%= report.employee_name %>
+					<% end %>	
+				</td>
+				<td style="border: 1px solid black;">					
+						<%= report.project_name %>	
+				</td>
+				<td style="border: 1px solid black;"><%= report.activity %></td>
+				<td style="border: 1px solid black;"><%= report.status %></td>
+				<td style="border: 1px solid black;"><%= report.duration %></td>
+			</tr>
+			<% employee_names << report.employee_name %>
+		<% end %>
+    </tbody>
+</table>
