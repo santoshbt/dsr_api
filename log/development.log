@@ -267,3 +267,2699 @@ Migrating to AddMissingFieldsToEmployee (20170407162033)
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8278467814444460010)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/employees" for ::1 at 2017-04-07 22:50:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (2.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2017-04-07 22:50:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/employees" for ::1 at 2017-04-07 22:51:58 +0530
+Processing by EmployeesController#create as */*
+  Parameters: {"employee_id"=>"1234", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamri@hp.com", "project_name"=>"Quantum", "activity"=>"Analyze", "status"=>"WIP", "duration"=>"1", "employee"=>{"employee_id"=>"1234", "employee_name"=>"Santosh", "employee_email"=>"santosh.turamri@hp.com", "project_name"=>"Quantum", "activity"=>"Analyze", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 1234], ["employee_name", "Santosh"], ["employee_email", "santosh.turamri@hp.com"], ["created_at", 2017-04-07 17:21:58 UTC], ["updated_at", 2017-04-07 17:21:58 UTC], ["project_name", "Quantum"], ["activity", "Analyze"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 45.2ms)
+
+
+Started POST "/employees" for ::1 at 2017-04-07 23:07:02 +0530
+Processing by EmployeesController#create as */*
+  Parameters: {"employee_id"=>"123123", "employee_name"=>"Prashanr", "employee_email"=>"p@hp.com", "project_name"=>"Radar", "activity"=>"Design", "status"=>"WIP", "duration"=>"1", "employee"=>{"employee_id"=>"123123", "employee_name"=>"Prashanr", "employee_email"=>"p@hp.com", "project_name"=>"Radar", "activity"=>"Design", "status"=>"WIP", "duration"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 123123], ["employee_name", "Prashanr"], ["employee_email", "p@hp.com"], ["created_at", 2017-04-07 17:37:02 UTC], ["updated_at", 2017-04-07 17:37:02 UTC], ["project_name", "Radar"], ["activity", "Design"], ["status", "WIP"], ["duration", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:19 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:24 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:29 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:34 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:39 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:44 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:49 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:54 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:24:59 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:04 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:09 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:14 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:19 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:24 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:29 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:34 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:39 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:44 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:49 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:54 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:25:59 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:04 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:12 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:17 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:22 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:31 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (3.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:36 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:41 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:46 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:51 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:26:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:31 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:36 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:41 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:46 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:51 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:27:56 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:01 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:06 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:49 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:54 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:28:59 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:04 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:50 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:29:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:50 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:30:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:38 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:43 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:48 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:50 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:53 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:31:58 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:03 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:08 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:13 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:18 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:23 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:28 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:33 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:38 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:43 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:48 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:50 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:53 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:32:58 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:03 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:08 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:13 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:18 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:23 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:28 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:33 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:38 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:43 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:48 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:50 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:53 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:33:58 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:03 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:08 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:13 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:18 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:23 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:28 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:33 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:38 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-07 23:34:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "employees"."created_at" FROM "employees"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "employees"."created_at" FROM "employees"[0m
+  [1m[36mEmployee Load (3.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, email FROM "employees"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT id, employee_email FROM "employees"[0m
+  [1m[35mSQL (96.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+Started GET "/employees" for ::1 at 2017-04-08 11:30:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:30:58 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:03 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/employees" for ::1 at 2017-04-08 11:31:04 +0530
+Processing by EmployeesController#create as */*
+  Parameters: {"employee_id"=>"1234", "employee_name"=>"Santosh", "employee_email"=>"bt.santosh01@gmail.com", "project_name"=>"Quantum", "activity"=>"Analyzing", "status"=>"Completed", "duration"=>"2", "employee"=>{"employee_id"=>"1234", "employee_name"=>"Santosh", "employee_email"=>"bt.santosh01@gmail.com", "project_name"=>"Quantum", "activity"=>"Analyzing", "status"=>"Completed", "duration"=>"2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 1234], ["employee_name", "Santosh"], ["employee_email", "bt.santosh01@gmail.com"], ["created_at", 2017-04-08 06:01:04 UTC], ["updated_at", 2017-04-08 06:01:04 UTC], ["project_name", "Quantum"], ["activity", "Analyzing"], ["status", "Completed"], ["duration", 2]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:08 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:13 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:18 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:23 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (17.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 21ms (Views: 2.2ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:28 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:33 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:38 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:43 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:48 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:50 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:53 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:55 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:31:58 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:00 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:03 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:05 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:08 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:10 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:13 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:15 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:18 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:20 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:23 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:25 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:28 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:30 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:33 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:35 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:38 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:40 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:43 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:45 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:32:48 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:14 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:19 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:24 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:29 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:33 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:36 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:33:37 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for ::1 at 2017-04-08 11:34:08 +0530
+Processing by EmployeesController#create as */*
+  Parameters: {"employee_id"=>"2222", "employee_name"=>"Santosh Test", "employee_email"=>"san@gmail.com", "project_name"=>"Radar", "activity"=>"Radar", "status"=>"Completed", "duration"=>"3", "employee"=>{"employee_id"=>"2222", "employee_name"=>"Santosh Test", "employee_email"=>"san@gmail.com", "project_name"=>"Radar", "activity"=>"Radar", "status"=>"Completed", "duration"=>"3"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 2222], ["employee_name", "Santosh Test"], ["employee_email", "san@gmail.com"], ["created_at", 2017-04-08 06:04:08 UTC], ["updated_at", 2017-04-08 06:04:08 UTC], ["project_name", "Radar"], ["activity", "Radar"], ["status", "Completed"], ["duration", 3]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 11:34:11 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (4.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 4.6ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "employees"."id" FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "employees"."id" FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+EmployeeMailer#report_reminder: processed outbound mail in 1.0ms
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (3.8ms)
+EmployeeMailer#report_reminder: processed outbound mail in 581.9ms
+Sent mail to bt.santosh01@gmail.com (20.0ms)
+Date: Sat, 08 Apr 2017 11:40:00 +0530
+From: from@example.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e87eb8f0bb3_19ca3ff04b03fa184317@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 19.0ms
+Sent mail to san@gmail.com (4.3ms)
+Date: Sat, 08 Apr 2017 11:40:01 +0530
+From: from@example.com
+To: san@gmail.com
+Message-ID: <58e87eb94509_19ca3ff04b03fa184464@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello san@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 17.9ms
+Sent mail to bt.santosh01@gmail.com (4.2ms)
+Date: Sat, 08 Apr 2017 11:42:06 +0530
+From: from@example.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e87f364cef4_19ca3ff04b03fa1845cc@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 11.8ms
+Sent mail to san@gmail.com (4.1ms)
+Date: Sat, 08 Apr 2017 11:42:06 +0530
+From: from@example.com
+To: san@gmail.com
+Message-ID: <58e87f3651515_19ca3ff04b03fa1846ce@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello san@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (5.9ms)
+EmployeeMailer#report_reminder: processed outbound mail in 329.7ms
+Sent mail to bt.santosh01@gmail.com (18.2ms)
+Date: Sat, 08 Apr 2017 11:49:30 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e880f29d142_1aa53fe08543fa0848f3@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (2.7ms)
+EmployeeMailer#report_reminder: processed outbound mail in 295.4ms
+Sent mail to bt.santosh01@gmail.com (2109.1ms)
+Date: Sat, 08 Apr 2017 11:51:48 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e8817c57f4b_1ae63ff14d41da38178bc@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 16.5ms
+Sent mail to san@gmail.com (1807.8ms)
+Date: Sat, 08 Apr 2017 11:51:50 +0530
+From: remider@dsr.com
+To: san@gmail.com
+Message-ID: <58e8817e752d9_1ae63ff14d41da3817982@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello san@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.8ms)
+EmployeeMailer#report_reminder: processed outbound mail in 24.0ms
+Sent mail to bt.santosh01@gmail.com (1887.3ms)
+Date: Sat, 08 Apr 2017 12:05:16 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e884a447a0_1ae63ff14d41da3818046@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 19.6ms
+Sent mail to san@gmail.com (1772.9ms)
+Date: Sat, 08 Apr 2017 12:05:17 +0530
+From: remider@dsr.com
+To: san@gmail.com
+Message-ID: <58e884a5e2298_1ae63ff14d41da38181bf@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello san@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (2.8ms)
+EmployeeMailer#report_reminder: processed outbound mail in 250.9ms
+Sent mail to bt.santosh01@gmail.com (4386.0ms)
+Date: Sat, 08 Apr 2017 12:13:37 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e88699505ff_1c9c3fdbfc83fa289858@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 21.1ms
+Sent mail to san@gmail.com (4078.2ms)
+Date: Sat, 08 Apr 2017 12:13:41 +0530
+From: remider@dsr.com
+To: san@gmail.com
+Message-ID: <58e8869db29fd_1c9c3fdbfc83fa28986d7@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello san@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, employee_email FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.5ms)
+EmployeeMailer#report_reminder: processed outbound mail in 15.4ms
+Sent mail to bt.santosh01@gmail.com (4260.1ms)
+Date: Sat, 08 Apr 2017 12:14:30 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com
+Message-ID: <58e886ce1eadb_1c9c3fdbfc83fa2898757@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello bt.santosh01@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/report_reminder.html.erb within layouts/mailer
+  Rendered employee_mailer/report_reminder.html.erb within layouts/mailer (0.1ms)
+EmployeeMailer#report_reminder: processed outbound mail in 17.8ms
+Sent mail to san@gmail.com (3829.2ms)
+Date: Sat, 08 Apr 2017 12:14:34 +0530
+From: remider@dsr.com
+To: san@gmail.com
+Message-ID: <58e886d262b5c_1c9c3fdbfc83fa289881@Santoshs-MacBook-Air.local.mail>
+Subject: Reminder to send DSR !!!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hello san@gmail.com,
+
+This is a remider to send your DSR by 7:00 PM today.
+The tool will send the DSR automatically.
+
+Please follow this link to update your DSR.
+http://localhost:3000
+
+
+Thanks,
+DSR Automation
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (27.9ms)
+EmployeeMailer#send_dsr: processed outbound mail in 285.7ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4320.8ms)
+Date: Sat, 08 Apr 2017 12:35:44 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88bc8b81aa_1dd83fea2c83fa08185f9@Santoshs-MacBook-Air.local.mail>
+Subject: DSR #{Date.today}
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Today's tasks accomplished as follows.
+
+<table>
+	<th>Employee Name</th>
+	<th>Activity</th>
+	<th>Status</th>
+	<th>Duration</th>
+
+		<tr>
+			<td>Santosh</td>
+			<td>Analyzing</td>
+			<td>Completed</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Santosh Test</td>
+			<td>Radar</td>
+			<td>Completed</td>
+			<td>3</td>
+		</tr>
+
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (17.9ms)
+EmployeeMailer#send_dsr: processed outbound mail in 193.7ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4404.2ms)
+Date: Sat, 08 Apr 2017 12:38:42 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88c7abab6d_1e313fdef2c3fa088382b@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Today's tasks accomplished as follows.
+
+<table class=".table-bordered">
+	<th>Employee Name</th>
+	<th>Activity</th>
+	<th>Status</th>
+	<th>Duration</th>
+
+		<tr>
+			<td>Santosh</td>
+			<td>Analyzing</td>
+			<td>Completed</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Santosh Test</td>
+			<td>Radar</td>
+			<td>Completed</td>
+			<td>3</td>
+		</tr>
+
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (13.5ms)
+EmployeeMailer#send_dsr: processed outbound mail in 27.5ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (6194.9ms)
+Date: Sat, 08 Apr 2017 12:40:23 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88cdf54d77_1e313fdef2c3fa08839c@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Today's tasks accomplished as follows.
+
+<table class="table table-bordered">
+	<th>Employee Name</th>
+	<th>Activity</th>
+	<th>Status</th>
+	<th>Duration</th>
+
+		<tr>
+			<td>Santosh</td>
+			<td>Analyzing</td>
+			<td>Completed</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Santosh Test</td>
+			<td>Radar</td>
+			<td>Completed</td>
+			<td>3</td>
+		</tr>
+
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (21.4ms)
+EmployeeMailer#send_dsr: processed outbound mail in 216.5ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4183.5ms)
+Date: Sat, 08 Apr 2017 12:41:04 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88d088f01d_1e6e3fedf603fa38797fa@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Today's tasks accomplished as follows.
+
+<table class="table table-bordered">
+	<th>Employee Name</th>
+	<th>Activity</th>
+	<th>Status</th>
+	<th>Duration</th>
+
+		<tr>
+			<td>Santosh</td>
+			<td>Analyzing</td>
+			<td>Completed</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Santosh Test</td>
+			<td>Radar</td>
+			<td>Completed</td>
+			<td>3</td>
+		</tr>
+
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (30.9ms)
+EmployeeMailer#send_dsr: processed outbound mail in 211.4ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4570.0ms)
+Date: Sat, 08 Apr 2017 12:42:54 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88d762b339_1e993fc71703fa2024845@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Today's tasks accomplished as follows.
+
+<table class="table table-bordered">
+	<thead>
+	    <tr>
+	      	<th>Employee Name</th>
+			<th>Activity</th>
+			<th>Status</th>
+			<th>Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td>Santosh</td>
+				<td>Analyzing</td>
+				<td>Completed</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Santosh Test</td>
+				<td>Radar</td>
+				<td>Completed</td>
+				<td>3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (19.3ms)
+EmployeeMailer#send_dsr: processed outbound mail in 218.3ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4446.4ms)
+Date: Sat, 08 Apr 2017 12:44:45 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88de562450_1ec53fc96e83fa2871612@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <style>
+	table {
+    	border-collapse: collapse;
+	}
+
+	table, th, td {
+	    border: 1px solid black;
+	}
+</style>
+
+Today's tasks accomplished as follows.
+
+<table class="table">
+	<thead>
+	    <tr>
+	      	<th>Employee Name</th>
+			<th>Activity</th>
+			<th>Status</th>
+			<th>Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td>Santosh</td>
+				<td>Analyzing</td>
+				<td>Completed</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Santosh Test</td>
+				<td>Radar</td>
+				<td>Completed</td>
+				<td>3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (26.8ms)
+EmployeeMailer#send_dsr: processed outbound mail in 202.0ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4218.1ms)
+Date: Sat, 08 Apr 2017 12:46:10 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88e3a1ba34_1efb3ff355c3fa187983d@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <style>
+	table {
+    	border-collapse: collapse;
+	}
+
+	table, th, td {
+	    border: 1px solid black;
+	}
+</style>
+
+Today's tasks accomplished as follows.
+
+<table>
+	<thead>
+	    <tr>
+	      	<th>Employee Name</th>
+			<th>Activity</th>
+			<th>Status</th>
+			<th>Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td>Santosh</td>
+				<td>Analyzing</td>
+				<td>Completed</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Santosh Test</td>
+				<td>Radar</td>
+				<td>Completed</td>
+				<td>3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (19.2ms)
+EmployeeMailer#send_dsr: processed outbound mail in 199.2ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4325.6ms)
+Date: Sat, 08 Apr 2017 12:48:05 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88ead24fc_1f213fe3f9c3fa38279e0@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td style="border: 1px solid black;">Santosh</td>
+				<td style="border: 1px solid black;">Analyzing</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">2</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;">Santosh Test</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (18.7ms)
+EmployeeMailer#send_dsr: processed outbound mail in 199.6ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4372.1ms)
+Date: Sat, 08 Apr 2017 12:49:23 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e88efbab06b_1f463ff72303fa203827a@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+	      	<th style="border: 1px solid black;">Project Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td style="border: 1px solid black;">Santosh</td>
+				<td style="border: 1px solid black;">Quantum</td>
+				<td style="border: 1px solid black;">Analyzing</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">2</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;">Santosh Test</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (31.9ms)
+EmployeeMailer#send_dsr: processed outbound mail in 44.6ms
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (29.2ms)
+EmployeeMailer#send_dsr: processed outbound mail in 45.5ms
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (188.4ms)
+EmployeeMailer#send_dsr: processed outbound mail in 202.0ms
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (32.2ms)
+EmployeeMailer#send_dsr: processed outbound mail in 46.0ms
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (11.5ms)
+EmployeeMailer#send_dsr: processed outbound mail in 28.0ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (5189.4ms)
+Date: Sat, 08 Apr 2017 13:10:59 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e8940b8b055_20263fd79643fa281995b@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+	      	<th style="border: 1px solid black;">Project Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+					<td style="border: 1px solid black;">Santosh</td>
+					<td style="border: 1px solid black;">Quantum</td>
+				<td style="border: 1px solid black;">Analyzing</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">2</td>
+			</tr>
+			<tr>
+					<td style="border: 1px solid black;">Santosh Test</td>
+					<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+Started GET "/employees" for ::1 at 2017-04-08 13:11:31 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 26ms (Views: 12.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2017-04-08 13:11:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2017-04-08 13:12:01 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/employees" for ::1 at 2017-04-08 13:12:14 +0530
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (7.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 7.9ms)
+
+
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+Started POST "/employees" for ::1 at 2017-04-08 13:16:08 +0530
+Processing by EmployeesController#create as */*
+  Parameters: {"employee_id"=>"1234", "employee_name"=>"Santosh", "employee_email"=>"bt.santosh01@gmail.com", "project_name"=>"Quantum", "activity"=>"Development", "status"=>"Miscellanious", "duration"=>"3", "employee"=>{"employee_id"=>"1234", "employee_name"=>"Santosh", "employee_email"=>"bt.santosh01@gmail.com", "project_name"=>"Quantum", "activity"=>"Development", "status"=>"Miscellanious", "duration"=>"3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "employees" ("employee_id", "employee_name", "employee_email", "created_at", "updated_at", "project_name", "activity", "status", "duration") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["employee_id", 1234], ["employee_name", "Santosh"], ["employee_email", "bt.santosh01@gmail.com"], ["created_at", 2017-04-08 07:46:08 UTC], ["updated_at", 2017-04-08 07:46:08 UTC], ["project_name", "Quantum"], ["activity", "Development"], ["status", "Miscellanious"], ["duration", 3]]
+  [1m[35m (84.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 91ms (Views: 0.4ms | ActiveRecord: 85.8ms)
+
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (1.6ms)
+EmployeeMailer#send_dsr: processed outbound mail in 19.3ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4414.8ms)
+Date: Sat, 08 Apr 2017 13:16:22 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e8954e11c19_20263fd79643fa28200bf@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+	      	<th style="border: 1px solid black;">Project Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+					<td style="border: 1px solid black;">Santosh</td>
+					<td style="border: 1px solid black;">Quantum</td>
+				<td style="border: 1px solid black;">Analyzing</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">2</td>
+			</tr>
+			<tr>
+					<td style="border: 1px solid black;">Santosh Test</td>
+					<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+			<tr>
+					<td style="border: 1px solid black;">Quantum</td>
+				<td style="border: 1px solid black;">Development</td>
+				<td style="border: 1px solid black;">Miscellanious</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08')[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (15.5ms)
+EmployeeMailer#send_dsr: processed outbound mail in 28.3ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4191.7ms)
+Date: Sat, 08 Apr 2017 13:17:26 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e8958ee0054_20263fd79643fa2820134@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+	      	<th style="border: 1px solid black;">Project Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td style="border: 1px solid black;">
+						Santosh
+				</td>
+				<td style="border: 1px solid black;">
+						Quantum
+				</td>
+				<td style="border: 1px solid black;">Analyzing</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">2</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;">
+						Santosh Test
+				</td>
+				<td style="border: 1px solid black;">
+						Radar
+				</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;">
+				</td>
+				<td style="border: 1px solid black;">
+						Quantum
+				</td>
+				<td style="border: 1px solid black;">Development</td>
+				<td style="border: 1px solid black;">Miscellanious</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+
+  Rendering employee_mailer/send_dsr.html.erb within layouts/mailer
+  [1m[36mEmployee Load (2.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (DATE(created_at) = '2017-04-08') ORDER BY employee_name asc[0m
+  Rendered employee_mailer/send_dsr.html.erb within layouts/mailer (14.3ms)
+EmployeeMailer#send_dsr: processed outbound mail in 28.0ms
+Sent mail to bt.santosh01@gmail.com, santosh.turamari85@gmail.com (4639.3ms)
+Date: Sat, 08 Apr 2017 13:20:33 +0530
+From: remider@dsr.com
+To: bt.santosh01@gmail.com, 
+ santosh.turamari85@gmail.com
+Message-ID: <58e8964986894_20263fd79643fa2820234@Santoshs-MacBook-Air.local.mail>
+Subject: DSR 2017-04-08
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+Today's tasks accomplished as follows.
+
+<table style="border-collapse: collapse;border: 1px;">
+	<thead>
+	    <tr>
+	      	<th style="border: 1px solid black;">Employee Name</th>
+	      	<th style="border: 1px solid black;">Project Name</th>
+			<th style="border: 1px solid black;">Activity</th>
+			<th style="border: 1px solid black;">Status</th>
+			<th style="border: 1px solid black;">Duration</th>
+	    </tr>
+    </thead>
+	
+    <tbody>
+			<tr>
+				<td style="border: 1px solid black;">
+						Santosh
+				</td>
+				<td style="border: 1px solid black;">					
+						Quantum	
+				</td>
+				<td style="border: 1px solid black;">Analyzing</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">2</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;">
+				</td>
+				<td style="border: 1px solid black;">					
+						Quantum	
+				</td>
+				<td style="border: 1px solid black;">Development</td>
+				<td style="border: 1px solid black;">Miscellanious</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;">
+						Santosh Test
+				</td>
+				<td style="border: 1px solid black;">					
+						Radar	
+				</td>
+				<td style="border: 1px solid black;">Radar</td>
+				<td style="border: 1px solid black;">Completed</td>
+				<td style="border: 1px solid black;">3</td>
+			</tr>
+    </tbody>
+</table>
+  </body>
+</html>
+

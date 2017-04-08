@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
 	def index
-		@employees = Employee.all		
+		@employees = Employee.today_reports		
 		render json: @employees		
 	end
 
