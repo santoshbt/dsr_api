@@ -1,4 +1,5 @@
 class EmployeesController < ApplicationController
+
 	def index
 		@employees = Employee.today_reports		
 		render json: @employees		
@@ -12,6 +13,16 @@ class EmployeesController < ApplicationController
 		else
 			render json: {success: false}
 		end
+	end
+
+	def reports
+		@employee_reports = Employee.my_reports(params[:employee_id])		
+		puts @employee_reports.inspect
+		if @employee_reports.size > 0
+			render plain: @employee_reports.to_json
+		else
+			render json: {success: false}
+		end	
 	end
 
 	private 
