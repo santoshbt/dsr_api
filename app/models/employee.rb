@@ -8,6 +8,10 @@ class Employee < ApplicationRecord
 
 	STAKE_EMAILS = ['bt.santosh01@gmail.com','santosh.turamari85@gmail.com']
 
+	def self.my_reports(employee_id)
+		reports = where('employee_id = ? and DATE(created_at) = ?',employee_id, Date.today)
+	end
+
 	def self.send_reminders
 		employees = today_reports.pluck('id, employee_email')
 		employees.each do |employee|
